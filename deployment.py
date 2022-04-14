@@ -33,5 +33,10 @@ def deploy():
     clone_repos()
     change_branch()
 
+    subprocess.run('docker-compose up -d', shell=True)
+
+
+
 if __name__ == "__main__":
     deploy()
+
