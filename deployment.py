@@ -29,3 +29,9 @@ def change_branch():
     for i in list_dir:
         subprocess.run(f'cd {i}; git checkout develop; cd ..', shell=True, capture_output=True, text=True)
 
+def deploy():
+    clone_repos()
+    change_branch()
+
+if __name__ == "__main__":
+    deploy()
